@@ -1,0 +1,5 @@
+DADDI R1,R0,5
+J 2
+linha escrito errado com o objetivo de causar erro
+DADDI R2,R0,100
+DADDI R2,R0,200
