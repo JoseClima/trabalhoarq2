@@ -4,3 +4,4 @@ SD R1,0(R1)
 DADDI R1,R1,-1
 J -3
 DADDI R1,R0,0
+//
