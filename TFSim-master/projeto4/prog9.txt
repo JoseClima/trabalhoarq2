@@ -1,52 +1,6 @@
-//insertion sort
-// tamanho do vetor = 5
 DADDI R1,R0,5
-// o vetor vai começar no endereço 100
-//r10 = 8
-DADDI R10,R0,8
-SD R10,100(R0)
-//r10 = 4
-DADDI R10,R0,4
-SD R10,104(R0)
-//r10 = 12
-DADDI R10,R0,12
-SD R10,108(R0)
-//r10 = 4
-DADDI R10,R0,4
-SD R10,112(R0)
-//r10 = 8
-DADDI R10,R0,8
-SD R10,116(R0)
-//i=1 e R2=i
-DADDI R2,R0,1    
-//primeiro for
-//R11 = i - tam do vetor
-DSUB R11,R2,R1
-//se i>= tam do vetor, ele sai
-BGEZ R11,21
-// R3  = vetor[i]
-LD R3,100(R2)
-// R4 = i - 1 e R4 = j
-DADDI R4,R2,-1
-//segundo for
-// se j < 0, ele sai
-BLTZ R4,8
-// R5 = vetor[j]
-LD R5,100(R4)
-// se vetor[j] <= R3, ele sai
-// R6 = R3 < vetor[j], se 1, ele nao sai
-SLT R6,R3,R5
-// se R6 == 0, R3 >= vetor[j], ele sai
-BEQ R6,R0,4
-// vetor[j+1] = vetor[j]
-DADDI R12,R4,1
-SD R5,100(R12)
-// j = j - 1, lembrando de R4 é o j
-DADDI R4,R4,-1
-J -10                    
-DADDI R12,R4,1
-SD R3,100(R12)
-//i++
-DADDI R2,R2,1
-J -22
-DADD R0,R0,R0
+BEQ R1,R0,4
+SD R1,0(R1)
+DADDI R1,R1,-1
+J -3
+DADDI R1,R0,0
